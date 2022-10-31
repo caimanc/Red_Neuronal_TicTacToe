@@ -94,7 +94,7 @@ from sklearn.neural_network import MLPClassifier
 
 # Declaración de nuestra red neuronal
 model_mlp = MLPClassifier(
-    hidden_layer_sizes = (60,60,60), # Cantidad de capas ocultas y su respectivo tamaño
+    hidden_layer_sizes = (90,90,90), # Cantidad de capas ocultas y su respectivo tamaño
     max_iter = 1000 # Cantidad máxima de iteraciones en el modelo
 )
 
@@ -167,6 +167,11 @@ import matplotlib.pyplot as plt
 plt.plot(loss_curve)
 plt.show()
 
-"""No menos importante, el método `.get_params()` nos permitirá ver todos aquellos los hiperparámetros con los que funciona nuestra red neuronal."""
+"""##Conclusiones
+
+Despues de realizar diferentes iteraciones decidimos colocar 3 capas(90,90,90) las cuales presentaron un acierto de 0.9444 lo cual implica que el modelo presento un buen aprendizaje esto es constatado al mirar la curva de perdida que a mayor numero de iteraciones tiende aproximarse a 0. adicionalñemete otra pueba de que el modelo realizo un buen aprendizaje es que al insertar nueva informacion el modelo la reconocio satisfactoriamente.
+
+No menos importante, el método `.get_params()` nos permitirá ver todos aquellos los hiperparámetros con los que funciona nuestra red neuronal.
+"""
 
 model_mlp.get_params()
